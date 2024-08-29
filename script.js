@@ -42,3 +42,21 @@ discover_tl
   .to(".slide4", {
     y: 220,
   });
+
+// Image Section
+gsap.to("#img_section2", {
+  clipPath: "circle(100% at 50% 50%)",
+  scrollTrigger: {
+    trigger: "#image-section > .container",
+    start: "top top",
+    bottom: "bottom bottom",
+    scrub: 2,
+    pin: true,
+    onEnter: () => {
+      document.body.classList.add("dark-theme");
+    },
+    onLeaveBack: () => {
+      document.body.classList.remove("dark-theme");
+    },
+  },
+});
