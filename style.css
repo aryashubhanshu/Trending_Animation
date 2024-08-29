@@ -104,6 +104,9 @@ a {
 
 /* Main */
 #site-main {
+  background-color: var(--primary-bg-color);
+  transition: all 3s;
+
   /* Discover */
   & #discover {
     display: flex;
@@ -141,9 +144,6 @@ a {
 
   /* Image */
   & #image-section {
-    background-color: var(--primary-bg-color);
-    transition: all 3s;
-
     & .cover {
       position: relative;
       height: 130vh;
@@ -156,6 +156,32 @@ a {
         top: -8%;
         left: 0;
         clip-path: circle(20% at 50% 50%);
+      }
+    }
+  }
+
+  /* Tag */
+  & #tag-section {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+
+    & .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+      width: 100rem;
+
+      & > span {
+        font-size: clamp(1.5rem, 3vw, 4rem);
+        font-weight: 700;
+        letter-spacing: -1px;
+        margin-bottom: 1rem;
+        border: 1px solid var(--primary-text-color);
+        padding: 1rem 4rem;
+        border-radius: 100vw;
       }
     }
   }
